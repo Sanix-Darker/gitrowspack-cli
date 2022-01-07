@@ -17,9 +17,10 @@ func main() {
 			case "show":
 				switch target := inputs[1]; target {
 				case "collections":
-					fmt.Println("Showing collections")
+					fmt.Println("Showing collections...")
+				case "databases":
+					fmt.Println("Showing databases...")
 				}
-				fmt.Println("Showing something...")
 			default:
 				fmt.Printf("Nothing selected")
 			}
