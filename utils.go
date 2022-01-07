@@ -60,7 +60,10 @@ func ping() bool {
 
 	errorCheck(err != nil)
 	// We parse stuffs
-	json.Unmarshal([]byte(resp), &p)
+	err = json.Unmarshal([]byte(resp), &p)
+	if err != nil {
+		return false
+	}
 
 	errorCheck(r.Response().StatusCode != 200)
 
